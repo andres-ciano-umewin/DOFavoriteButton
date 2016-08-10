@@ -11,23 +11,22 @@
 
 import UIKit
 
-@IBDesignable
 public class DOFavoriteButton: UIButton {
 
     private var imageShape: CAShapeLayer!
-    @IBInspectable public var image: UIImage! {
+    public var image: UIImage! {
         didSet {
             createLayers(image: image)
         }
     }
-    @IBInspectable public var imageColorOn: UIColor! = UIColor(red: 255/255, green: 172/255, blue: 51/255, alpha: 1.0) {
+    public var imageColorOn: UIColor! = UIColor(red: 255/255, green: 172/255, blue: 51/255, alpha: 1.0) {
         didSet {
             if (selected) {
                 imageShape.fillColor = imageColorOn.CGColor
             }
         }
     }
-    @IBInspectable public var imageColorOff: UIColor! = UIColor(red: 136/255, green: 153/255, blue: 166/255, alpha: 1.0) {
+    public var imageColorOff: UIColor! = UIColor(red: 136/255, green: 153/255, blue: 166/255, alpha: 1.0) {
         didSet {
             if (!selected) {
                 imageShape.fillColor = imageColorOff.CGColor
@@ -37,14 +36,14 @@ public class DOFavoriteButton: UIButton {
 
     private var circleShape: CAShapeLayer!
     private var circleMask: CAShapeLayer!
-    @IBInspectable public var circleColor: UIColor! = UIColor(red: 255/255, green: 172/255, blue: 51/255, alpha: 1.0) {
+    public var circleColor: UIColor! = UIColor(red: 255/255, green: 172/255, blue: 51/255, alpha: 1.0) {
         didSet {
             circleShape.fillColor = circleColor.CGColor
         }
     }
 
     private var lines: [CAShapeLayer]!
-    @IBInspectable public var lineColor: UIColor! = UIColor(red: 250/255, green: 120/255, blue: 68/255, alpha: 1.0) {
+    public var lineColor: UIColor! = UIColor(red: 250/255, green: 120/255, blue: 68/255, alpha: 1.0) {
         didSet {
             for line in lines {
                 line.strokeColor = lineColor.CGColor
@@ -59,7 +58,7 @@ public class DOFavoriteButton: UIButton {
     private let lineOpacity = CAKeyframeAnimation(keyPath: "opacity")
     private let imageTransform = CAKeyframeAnimation(keyPath: "transform")
 
-    @IBInspectable public var duration: Double = 1.0 {
+    public var duration: Double = 1.0 {
         didSet {
             circleTransform.duration = 0.333 * duration // 0.0333 * 10
             circleMaskTransform.duration = 0.333 * duration // 0.0333 * 10
