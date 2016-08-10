@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F6071201B6366ED0058F570 /* DOFavoriteButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F60711F1B6366ED0058F570 /* DOFavoriteButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		185F2F701D5B871200433CCF /* DOFavoriteButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F60711B1B6366ED0058F570 /* DOFavoriteButton.framework */; };
+		185F2F711D5B871200433CCF /* DOFavoriteButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F60711B1B6366ED0058F570 /* DOFavoriteButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4F60713C1B6367B00058F570 /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60713B1B6367B00058F570 /* DOFavoriteButton.swift */; };
 		4FBAA7031B4D807F00C8657F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBAA7021B4D807F00C8657F /* AppDelegate.swift */; };
 		4FBAA7051B4D807F00C8657F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBAA7041B4D807F00C8657F /* ViewController.swift */; };
@@ -28,10 +29,33 @@
 		};
 /* End PBXBuildRule section */
 
+/* Begin PBXContainerItemProxy section */
+		185F2F721D5B871200433CCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FBAA6F51B4D807F00C8657F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F60711A1B6366ED0058F570;
+			remoteInfo = DOFavoriteButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		185F2F741D5B871200433CCF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				185F2F711D5B871200433CCF /* DOFavoriteButton.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4F60711B1B6366ED0058F570 /* DOFavoriteButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOFavoriteButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F60711E1B6366ED0058F570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F60711F1B6366ED0058F570 /* DOFavoriteButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOFavoriteButton.h; sourceTree = "<group>"; };
 		4F60713B1B6367B00058F570 /* DOFavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DOFavoriteButton.swift; path = ../../DOFavoriteButton/DOFavoriteButton.swift; sourceTree = "<group>"; };
 		4FBAA6FD1B4D807F00C8657F /* DOFavoriteButton-DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DOFavoriteButton-DEMO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBAA7011B4D807F00C8657F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185F2F701D5B871200433CCF /* DOFavoriteButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				4F60713B1B6367B00058F570 /* DOFavoriteButton.swift */,
-				4F60711F1B6366ED0058F570 /* DOFavoriteButton.h */,
 				4F60711D1B6366ED0058F570 /* Supporting Files */,
 			);
 			path = DOFavoriteButton;
@@ -124,7 +148,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F6071201B6366ED0058F570 /* DOFavoriteButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,10 +180,12 @@
 				4FBAA6F91B4D807F00C8657F /* Sources */,
 				4FBAA6FA1B4D807F00C8657F /* Frameworks */,
 				4FBAA6FB1B4D807F00C8657F /* Resources */,
+				185F2F741D5B871200433CCF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				185F2F731D5B871200433CCF /* PBXTargetDependency */,
 			);
 			name = "DOFavoriteButton-DEMO";
 			productName = "DOFavoriteButton-DEMO";
@@ -173,7 +198,7 @@
 		4FBAA6F51B4D807F00C8657F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0700;
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Daiki Okumura";
@@ -244,6 +269,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		185F2F731D5B871200433CCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F60711A1B6366ED0058F570 /* DOFavoriteButton */;
+			targetProxy = 185F2F721D5B871200433CCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FBAA7061B4D807F00C8657F /* Main.storyboard */ = {
@@ -400,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "DOFavoriteButton-DEMO/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -412,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "DOFavoriteButton-DEMO/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

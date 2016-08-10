@@ -97,7 +97,7 @@ public class DOFavoriteButton: UIButton {
         addTargets()
     }
 
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         createLayers(image: UIImage())
         addTargets()
@@ -338,11 +338,11 @@ public class DOFavoriteButton: UIButton {
         //===============
         // add target
         //===============
-        self.addTarget(self, action: "touchDown:", forControlEvents: UIControlEvents.TouchDown)
-        self.addTarget(self, action: "touchUpInside:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.addTarget(self, action: "touchDragExit:", forControlEvents: UIControlEvents.TouchDragExit)
-        self.addTarget(self, action: "touchDragEnter:", forControlEvents: UIControlEvents.TouchDragEnter)
-        self.addTarget(self, action: "touchCancel:", forControlEvents: UIControlEvents.TouchCancel)
+        addTarget(self, action: #selector(touchDown), forControlEvents: .TouchDown)
+        addTarget(self, action: #selector(touchUpInside), forControlEvents: .TouchUpInside)
+        addTarget(self, action: #selector(touchDragExit), forControlEvents: .TouchDragExit)
+        addTarget(self, action: #selector(touchDragEnter), forControlEvents: .TouchDragEnter)
+        addTarget(self, action: #selector(touchCancel), forControlEvents: .TouchCancel)
     }
 
     func touchDown(sender: DOFavoriteButton) {
